@@ -16,7 +16,7 @@ namespace Calculadora
             Console.WriteLine("Digite a expresão que vai ser usada (+, -, *, /, %): ");
             string exp = Console.ReadLine();
 
-            Console.WriteLine("Digite seu primeiro numero: ");
+            Console.WriteLine("Digite seu segundo numero: ");
             int num2 = Convert.ToInt32(Console.ReadLine());
 
             string adi = "+";
@@ -29,31 +29,31 @@ namespace Calculadora
             if (exp == adi)
             {
                 result = num1 + num2;
-                Console.WriteLine($"O resultado é {result}");
+                Console.WriteLine($"O Resultado é {result}");
             }
             else if (exp == sub) 
             {
                 result = num1 - num2;
-                Console.WriteLine($"O resultado é {result}");
+                Console.WriteLine($"O Resultado é {result}");
             }
             else if (exp == mult)
             {
                 result = num1 * num2;
-                Console.WriteLine($"O resultado é {result}");
+                Console.WriteLine($"O Resultado é {result}");
             }
             else if (exp == div)
             {
                 result = num1 / num2;
-                Console.WriteLine($"O resultado é {result}");
+                Console.WriteLine($"O Resultado é {result}");
             }
             else if (exp == porc)
             {
                 result = (num1 * num2) / 100;
-                Console.WriteLine($"O resultado é {result}");
+                Console.WriteLine($"O Resultado é {result}");
             }
             else
             {
-                Console.WriteLine("Algo deu errado pvf tente novamnete");
+                Console.WriteLine("Algo deu errado pvf tente novamente");
             }
             Console.ReadLine();
         }
