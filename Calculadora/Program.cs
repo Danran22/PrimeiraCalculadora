@@ -19,43 +19,36 @@ namespace Calculadora
             Console.WriteLine("Digite seu segundo numero: ");
             int num2 = Convert.ToInt32(Console.ReadLine());
 
-            string adi = "+";
-            string sub = "-";
-            string mult = "*";
-            string div = "/";
-            string porc = "%";
-            int result;
-
-            if (exp == adi)
+            if (exp == "/" && num2 == 0)
             {
+                Console.WriteLine("Não é possivel dividir por 0");
+            }
+
+            float result = 0;
+
+            switch (exp) 
+            {
+                case "+":
                 result = num1 + num2;
                 Console.WriteLine($"O Resultado é {result}");
-            }
-            else if (exp == sub) 
-            {
+                break;
+                case "-":
                 result = num1 - num2;
                 Console.WriteLine($"O Resultado é {result}");
-            }
-            else if (exp == mult)
-            {
+                break;
+                case "*":
                 result = num1 * num2;
                 Console.WriteLine($"O Resultado é {result}");
-            }
-            else if (exp == div)
-            {
-                result = num1 / num2;
+                break;
+                case "/":
+                result = (float) num1 / num2;
                 Console.WriteLine($"O Resultado é {result}");
-            }
-            else if (exp == porc)
-            {
+                break;
+                case "%":
                 result = (num1 * num2) / 100;
                 Console.WriteLine($"O Resultado é {result}");
+                break;
             }
-            else
-            {
-                Console.WriteLine("Algo deu errado pvf tente novamente");
-            }
-            Console.ReadLine();
         }
     }
 }
