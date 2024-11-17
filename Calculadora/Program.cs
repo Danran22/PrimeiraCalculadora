@@ -52,13 +52,12 @@ namespace Calculadora
         }
         static void expre()
         {
-            Console.WriteLine
-            (@"Digite a expresão que vai ser usada 
-            adição (+)
-            Subitração (-)
-            Multiplicação (*)
-            Divisão (/)
-            Porcetagem (%)");
+            Console.WriteLine("Digite a expresão que vai ser usada: " +
+                "\nAdição (+) " +
+                "\nSubitração (-) " +
+                "\nMultiplicação (*) " +
+                "\nDivisão (/) " +
+                "\nPorcetagem (%)");
         }
     }
 }
