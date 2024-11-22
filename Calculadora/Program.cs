@@ -52,6 +52,9 @@ namespace Calculadora
                         result = (num1 * num2) / 100;
                         Console.WriteLine($"O Resultado é {result}");
                         break;
+                    default:
+                        Console.Writeline("expresão não registrada");
+                        break;
                 }
 
                 Console.WriteLine("Gostaria de Continuar a conta? (S ou N)");
