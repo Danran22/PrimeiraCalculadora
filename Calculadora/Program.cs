@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
+using System.Xml.Schema;
 
 namespace Calculadora
 {
@@ -10,9 +7,9 @@ namespace Calculadora
     {
         static void Main(string[] args)
         {
-            string star = "S";
+            string star;
 
-            while (star == "S" || star == "s")
+            do
             {
                 Console.WriteLine("Digite seu primeiro numero: ");
                 int num1 = Convert.ToInt32(Console.ReadLine());
@@ -52,14 +49,11 @@ namespace Calculadora
                         result = (num1 * num2) / 100;
                         Console.WriteLine($"O Resultado é {result}");
                         break;
-                    default:
-                        Console.Writeline("expresão não registrada");
-                        break;
                 }
 
                 Console.WriteLine("Gostaria de Continuar a conta? (S ou N)");
                 star = Console.ReadLine();
-            }
+            } while (star == "S" || star == "s");
             Console.WriteLine("Obg por ter usado a caculadora até a proxima!");
             Console.ReadLine();
         }
